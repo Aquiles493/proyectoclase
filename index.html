@@ -1,35 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serbell</title>
     <link rel="stylesheet" href="css/default.css">
-    <link rel="favicon" href="images/icons/favicon.ico">
+    <link rel="icon" href="images/icons/favicon.png">
 </head>
+
 <body>
-    <!--  Estructura main de la página principal.  -->
-    <main>
-        <h2>Serbell</h2>
-        <p>Welcome to Serbell, the web server which doesn't ring your data to others.</p>
-    </main>
-    <section class="navegar">
-        <!--  Barra de navegación  -->
-        <nav>
-            <ul>
-                <li><a href="pages/services.html">Services</a></li>
-                <li><a href="pages/aboutus.html"></a>About us</li>
-                <li><a href="pages/contact.html">Contact me</a></li>
-            </ul>
-        </nav>
-    </section>
-    <!--   Contenido de la parte izquierda. Preferiblemente un vídeo de fondo con autoplay y loop.    -->
-    <section class="leftside">
-        <div class="video">
-            <video autoplay loop muted controls>
-                <source src="video/default.mp4" type="video/mp4">
-            </video>
+
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="videos/bg.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos.
+        </video>
+
+        <div class="main-content">
+            <header>
+                <h2>Serbell</h2>
+                <p>Welcome to Serbell, the web server which doesn't ring your data to others.</p>
+            </header>
+
+            <section class="leftside">
+                <nav>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#aboutus">About us</a></li>
+                        <li><a href="#contact">Contact me</a></li>
+                    </ul>
+                </nav>
+            </section>
         </div>
-    </section>
+
+        <section class="visiblecontent" id="contact">
+            <div class="modal-box">
+                <a href="#" class="cierre">&times;</a>
+                <h3>Contact</h3>
+                <p>You can contact me on... <a href="https:x.com"><img src="images/twitter.png" alt=""></a><a
+                        href="https:facebook.com"><img src="images/facebook.png" alt=""></a> <a href="https:reddit.com"><img
+                            src="images/reddit.png" alt=""></a></p>
+                            <br>
+                <p> You can contact me by my phone number too! <a href="tel:+34991154870">+34 991 15 48 70</a></p>
+            </div>
+        </section>
+                <section class="visiblecontent" id="aboutus">
+            <div class="modal-box">
+                <a href="#" class="cierre">&times;</a>
+                <h3>About us</h3>
+                <p>I am a Sysadmin who doesn't like privacy and security problems. That's why I made a project to enhance my own privacy, but I like to share what i have done just to make others follow my steps by their own. You can call me Bell, I hope you love privicy as much as me🔒</p>
+            </div>
+        </section>
+                </section>
+                <section class="visiblecontent" id="services">
+            <div class="modal-box">
+                <a href="#" class="cierre">&times;</a>
+                <h3>Services</h3>
+                <p>My server has some services. My main services are <a href="pages/ncselfmade.html"><img src="images/nc.png" alt=""></a>  <a href="pages/ptrodactyl.html"><img src="images/ptro.png" alt=""></a></p>
+                <br>
+                <p>Click on them to read my own documentation about how to install them and enhance your security (or gaming)</p>
+            </div>
+        </section>
+    </div>
+
 </body>
+
 </html>
