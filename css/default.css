@@ -5,14 +5,11 @@
     box-sizing: border-box;
 }
 
-body,
-html {
+body, html {
     width: 100%;
     height: 100%;
-    font-family: Arial, sans-serif;
-    /* O la fuente que prefieras */
-    overflow-x: hidden;
-    /* Evita que aparezcan barras de scroll innecesarias */
+    font-family: Arial, sans-serif; /* O la fuente que prefieras */
+    overflow-x: hidden; /* Evita que aparezcan barras de scroll innecesarias */
     overflow-y: auto;
 }
 
@@ -24,8 +21,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    /* Texto blanco para resaltar sobre el fondo oscuro */
+    color: white; /* Texto blanco para resaltar sobre el fondo oscuro */
 }
 
 /* El vídeo de fondo */
@@ -37,20 +33,18 @@ html {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
-    /* Se mantiene detrás de todo */
+    z-index: -1; /* Se mantiene detrás de todo */
     transform: translate(-50%, -50%);
     object-fit: cover;
-
+    
     /* EFECTO DE OSCURIDAD: Ajusta el 0.3 según qué tan oscuro lo quieras */
-    filter: brightness(0.35) contrast(1.1);
+    filter: brightness(0.35) contrast(1.1); 
 }
 
 /* Contenedor de texto y navegación */
 .main-content {
     text-align: center;
-    z-index: 1;
-    /* Por delante del vídeo */
+    z-index: 1; /* Por delante del vídeo */
     padding: 20px;
 }
 
@@ -87,29 +81,24 @@ nav ul li a {
 nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
-
 /* Estilo base del contenido oculto */
 /* 1. Ocultamos la sección completamente por defecto */
 .visiblecontent {
-    position: fixed;
-    /* Lo fijamos para que cubra toda la pantalla */
+    position: fixed; /* Lo fijamos para que cubra toda la pantalla */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    /* Fondo muy oscuro para leer bien */
+    background: rgba(0, 0, 0, 0.85); /* Fondo muy oscuro para leer bien */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-    /* Aseguramos que esté por encima de todo */
-
+    z-index: 100; /* Aseguramos que esté por encima de todo */
+    
     /* Estado oculto */
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    /* Evita que el usuario haga clic en ella si está invisible */
+    pointer-events: none; /* Evita que el usuario haga clic en ella si está invisible */
     transition: opacity 0.4s ease, visibility 0.4s;
 }
 
@@ -117,8 +106,7 @@ nav ul li a:hover {
 .visiblecontent:target {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
-    /* Activamos clics cuando es visible */
+    pointer-events: auto; /* Activamos clics cuando es visible */
 }
 
 /* 3. Estilo para el cuadro de texto (opcional pero recomendado) */
@@ -128,49 +116,42 @@ nav ul li a:hover {
     border: 1px solid #444;
     border-radius: 8px;
     font-size: 1.5rem;
-    color: #00ffcc;
-    /* Un color neón para que resalte */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #00ffcc; /* Un color neón para que resalte */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap:    30px;
     align-items: center;
-
+    
 }
-
-.visiblecontent img {
+.visiblecontent img{
     width: 100px;
 }
-
-.visiblecontent p img {
+.visiblecontent  p  img{
     flex-wrap: wrap;
     display: flex;
     flex-flow: row;
 }
-
-.cierre {
+.cierre{
     font-size: 35px;
 }
-
-.modal-box {
+.modal-box{
     width: 90%;
 }
 
 
 
 .left ul {
-    list-style: none;
-    /* Quita los puntos de la lista */
+    list-style: none; /* Quita los puntos de la lista */
     display: flex;
     flex-direction: column;
-
+    
     /* Esto separa todos los li exactamente 15px entre sí */
-    gap: 15px;
-
+    gap: 15px; 
+    
     padding: 0;
-    align-items: stretch;
-    /* Alinea el contenido del li verticalmente */
+        align-items: stretch; /* Alinea el contenido del li verticalmente */
 
 }
 
@@ -183,112 +164,78 @@ nav ul li a:hover {
     transition: transform 0.2s ease;
     white-space: nowrap;
     display: block;
-    width: 70%;
+    width: 70% ;
 }
 
 .left ul li a:hover {
-    transform: translateX(5px);
-    /* Se mueve un poco a la derecha al pasar el ratón */
+    transform: translateX(5px); /* Se mueve un poco a la derecha al pasar el ratón */
 }
-
 /* El contenedor que separa menú de contenido */
 .main-layout {
     display: flex;
     width: 100%;
-    max-width: 1200px;
-    /* Opcional: para que no se estire infinito en pantallas ultra anchas */
+    max-width: 1200px; /* Opcional: para que no se estire infinito en pantallas ultra anchas */
     margin: 0 auto;
     padding: 40px 20px;
-    gap: 30px;
-    /* Espacio real entre el menú y el fondo de info */
+    gap: 30px; /* Espacio real entre el menú y el fondo de info */
     position: relative;
     z-index: 1;
 }
 
 /* El menú es una columna fija al scroll pero que ocupa su sitio */
 .left {
-    flex-basis: 250px;
-    flex-shrink: 0;
+    flex-basis: 250px; /* Ancho que le reserva al menú */
+    flex-shrink: 0;    /* Impide que el menú se aplaste */
     position: sticky;
-    top: 40px;
+    top: 40px;         /* Se queda pegado arriba al bajar con el ratón */
     height: fit-content;
     width: fit-content;
-    /* CAMBIO CLAVE: */
-    z-index: 10;
 }
 
 /* La parte del contenido */
 .main-content {
-    flex: 1;
-    /* Toma todo el espacio restante */
+    flex: 1; /* Toma todo el espacio restante */
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .main-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
+    
     /* Alinea todo al principio (arriba), no al centro */
-
+    
     /* Asegura que el contenedor no tenga una altura bloqueada */
-    height: auto;
+    height: auto; 
     padding-top: 325px;
 }
-
 .info {
     background: #111;
     border: 1px solid #444;
     border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    /* Ahora el 100% es respecto a su columna flex, no a la pantalla */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 100%; /* Ahora el 100% es respecto a su columna flex, no a la pantalla */
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* Esto está bien para centrar el texto */
-    justify-content: flex-start;
-    /* Asegura que empiece desde arriba */
-    min-height: min-content;
-    /* Permite que la caja crezca lo que necesite */
+    align-items: center; /* Esto está bien para centrar el texto */
+    justify-content: flex-start; /* Asegura que empiece desde arriba */
+    min-height: min-content; /* Permite que la caja crezca lo que necesite */
 }
-
-.info h3 {
+.info h3{
     margin-bottom: 10px;
 }
-
-.marginator {
+.marginator{
     margin-top: 20px;
 }
-
 .info iframe {
-    max-width: 100%;
-    /* No permite que sea más ancho que su contenedor */
-    width: 100%;
-    /* Se adapta al ancho disponible */
-    height: auto;
-    /* Evita alturas fijas que rompen el scroll */
-    aspect-ratio: 16 / 9;
-    /* Mantiene la forma de video */
+    max-width: 100%; /* No permite que sea más ancho que su contenedor */
+    width: 100%;    /* Se adapta al ancho disponible */
+    height: auto;   /* Evita alturas fijas que rompen el scroll */
+    aspect-ratio: 16 / 9; /* Mantiene la forma de video */
     display: block;
-    margin: 20px auto;
-    /* Lo centra y le da aire */
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    position:relative ;
-    bottom: -40px;
-}
-
-.footerfix {
-    display: block;
-    position: absolute;
-    bottom: 5px;
+    margin: 20px auto; /* Lo centra y le da aire */
 }
