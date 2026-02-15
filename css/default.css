@@ -269,3 +269,68 @@ nav ul li a:hover {
         margin-top:20px ;
     }
 }
+
+
+/*Formulario */
+
+/* Layout del contenido del contacto */
+.contact-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que en móvil se ponga uno debajo de otro */
+    margin-top: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 250px;
+}
+
+.contact-form input, .contact-form select {
+    padding: 10px;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #00ffcc;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: white;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.map-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.social-p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-p img {
+    width: 30px;
+    margin: 0 10px;
+}
