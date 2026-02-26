@@ -268,8 +268,13 @@ nav ul li a:hover {
     .leftside li{
         margin-top:20px ;
     }
+    .docti{
+        margin-top: 500px;
+    }
 }
-
+.docti {
+    margin-top: 400px;
+}
 
 /*Formulario */
 
