@@ -61,14 +61,14 @@ header p {
 }
 
 /* Navegación */
-nav ul {
+.normal ul {
     list-style: none;
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-nav ul li a {
+.normal ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -78,7 +78,7 @@ nav ul li a {
     transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
+.normal ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 /* Estilo base del contenido oculto */
@@ -339,3 +339,151 @@ nav ul li a:hover {
     width: 30px;
     margin: 0 10px;
 }
+
+
+/*Carrusel*/
+
+
+#slider {
+    position: relative;
+    width: 100%;   /* Asegura que use todo el ancho del main-content */
+    height: auto;  /* Deja que crezca según el contenido */
+    margin-top: 50px;
+}
+#slider nav {
+    width: 100%; /* Cambiado de 100vw a 100% */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f1f2f3;
+}
+ /*ELIMINA TODOS LOS ESTILOS DE LAS LISTAS DEL DOCUMENTO*/
+ #slider ul,
+ #slider li {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     box-sizing: border-box;
+ }
+#slider nav ul li img {
+    width: 50px; /* Tamaño miniatura para los botones */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+ /*CONTENEDOR DE DIAPOSITIVAS*/
+/* El contenedor de las fotos */
+#slider ul.slider {
+    position: relative;
+    height: 400px;  /* Debe coincidir con la altura que pusiste en el li */
+    width: 100%;
+    padding: 0;     /* Elimina el padding de 30px que tenías antes para que la imagen toque los bordes */
+    margin: 0;
+    list-style: none;
+    background-color: #111; /* Tu color oscuro de fondo */
+}
+
+  /*La primera diapositiva siempre va a estar visible*/
+ #slider ul.slider li:first-child {
+     opacity: 1;
+ }
+
+ /*pseudo-clase que selecciona el elemento cuyo id coincide con el fragmento de la URL actual (el texto después del # en la barra de direcciones)*/
+ #slider ul.slider li:target {
+     opacity: 1;
+ }
+
+ #slider nav {
+     position: relative;
+     top: 200px;
+     left: 50px;
+ }
+
+
+ /*  A partir de aquí el CSS es puro diseño visual para hacer una versión más vistosa.*/
+ 
+
+ #slider ul.slider {
+     padding: 30px;
+ }
+
+#slider ul.slider li {
+    width: 100%;       /* Ocupa todo el ancho del cuadro negro/marrón */
+    height: 400px;     /* Ajusta esta altura a tu gusto */
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    overflow: hidden;  /* Evita que la imagen se salga si es muy grande */
+}
+#slider .slider img {
+    width: 100%;        /* Obliga a la imagen a ser tan ancha como el li */
+    height: 80%;       /* Obliga a la imagen a ser tan alta como el li */
+    object-fit: cover;  /* ESTA ES LA CLAVE: Corta los bordes sobrantes sin deformar la imagen */
+    display: block;
+}
+
+ #slider .menu li a {
+     padding-top: 30px;
+ }
+
+ #slider .slider li p {
+     position: absolute;/*para mostrar el texto en la diapositiva*/
+     height: 60px;
+     width: 70%;
+     color: white;
+ }
+
+ #slider nav {
+     position: absolute;
+     top: auto;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: #6285a8;
+ }
+
+ #slider nav ul {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+
+ #slider nav ul li {
+     display: flex;
+     flex-grow: 1;
+     flex-wrap: wrap;
+     box-sizing: border-box;
+ }
+
+ #slider nav a {
+    font-size: 100%;
+     text-decoration: none;
+     font-weight: bold;
+     color: #00324b;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     line-height: 1.8;
+     flex-grow: 1;
+     text-align: center;
+     border-top: 5px solid #00324b;
+     border-right: 1px solid #00324b;
+     flex-wrap: wrap;
+     position: relative;
+ }
+
+ #slider nav li:last-child a {/*Al último elemento del menú de dipapositivas le quita el borde derecho*/
+     border-right: 0;
+ }
+
+ #slider nav a:hover {
+     background-color: black;
+     color: #fff;
+     border-top-color: white;
+ }
+
+ #slider nav a:active {
+     border-top-color: #f90;
+     background: #f90;
+     color: #00324b;
+ }
