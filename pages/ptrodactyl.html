@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serbell - Pterodactyl</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="icon" href="../images/icons/favicon.png">
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="../videos/bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="main-layout">
+
+            <aside class="left">
+                <nav class="normal">
+                    <ul>
+                        <li><a href="../index.html">Go back</a></li>
+                        <h3>Index</h3>
+                        <li><a href="#installation">Installation guide</a></li>
+                        <li><a href="#requirements">Requirements</a></li>
+                        <li><a href="#security">Enhance security</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <header class="docti">
+                    <h2 style="margin-top: 50px;">Pterodactyl Panel</h2>
+                    <p>So... you want to host your own game servers?</p>
+                </header>
+
+                <hr>
+
+                <section class="info" id="installation">
+                    <h3>Installation</h3>
+                    <p>Pterodactyl is an open-source game server management panel built with PHP, React, and Docker.</p>
+                    <p>To install Pterodactyl, you will need a web server, a database, and Docker for running the game servers.</p>
+                    <p>The installation process consists of setting up the Panel (web interface) and the Wings daemon (node service).</p>
+                    <br>
+                    <p>General steps:</p>
+                    <ul>
+                        <li>Install dependencies (PHP 8.x, Composer, Node.js)</li>
+                        <li>Configure MariaDB/MySQL database</li>
+                        <li>Install and configure the Pterodactyl Panel</li>
+                        <li>Install Docker</li>
+                        <li>Deploy Wings on your node server</li>
+                    </ul>
+                </section>
+
+                <section class="info" id="requirements" style="margin-top: 50px;">
+                    <h3>Software requirements</h3>
+                    <p>• PHP 8.1 or newer</p>
+                    <p>• MariaDB/MySQL database</p>
+                    <p>• Nginx or Apache2</p>
+                    <p>• Docker (required for Wings)</p>
+                    <p>• Redis (recommended for performance)</p>
+
+                    <h3 class="marginator">Hardware requirements</h3>
+                    <p>You don’t need a monster server to start, but hardware depends on how many game servers you plan to host.</p>
+                    <p>For small setups: 8GB RAM, SSD storage, and a modern CPU is recommended.</p>
+                    <p>For production: 16GB+ RAM and NVMe storage will give much better performance and stability.</p>
+                </section>
+
+                <section class="info" id="security">
+                    <h3>SECURITY</h3>
+                    <p>Hosting game servers exposed to the internet requires proper security configuration.</p>
+                    <p>Make sure to configure a firewall, use SSL certificates (Let's Encrypt), and keep your system updated.</p>
+                    <p>It is highly recommended to separate your Panel and Nodes properly and restrict root access.</p>
+                    <p>Always use strong passwords and enable 2FA inside the panel.</p>
+                </section>
+
+                <section class="info" id="portfolio" style="margin-top: 60px;">
+    <h2>Screenshots</h2>
+    <p>Some views of the Pterodactyl panel in action.</p>
+
+    <div class="image-grid">
+
+        <div>
+            <img src="../images/s1.png" alt="Screenshot 1">
+            <p>Server house</p>
+        </div>
+
+        <div>
+            <img src="../images/s2.png" alt="Screenshot 2">
+            <p>Server outside</p>
+        </div>
+
+        <div>
+            <img src="../images/s3.png" alt="Screenshot 3">
+            <p>Woods</p>
+        </div>
+
+        <div>
+            <img src="../images/s4.png" alt="Screenshot 4">
+            <p>Why am I doing this?</p>
+        </div>
+
+        <div>
+            <img src="../images/s5.png" alt="Screenshot 5">
+            <p>I'm bored as hell</p>
+        </div>
+
+        <div>
+            <img src="../images/s6.png" alt="Screenshot 6">
+            <p>How about your day?</p>
+        </div>
+
+        <div>
+            <img src="../images/s7.png" alt="Screenshot 7">
+            <p>Hello</p>
+        </div>
+
+        <div>
+            <img src="../images/s8.png" alt="Screenshot 8">
+            <p>Nice to meet you</p>
+        </div>
+
+        <div>
+            <img src="../images/s9.png" alt="Screenshot 9">
+            <p>Panel dashboard</p>
+        </div>
+
+        <div>
+            <img src="../images/s10.png" alt="Screenshot 10">
+            <p>Server configuration</p>
+        </div>
+
+        <div>
+            <img src="../images/s11.png" alt="Screenshot 11">
+            <p>File manager</p>
+        </div>
+
+        <div>
+            <img src="../images/s12.png" alt="Screenshot 12">
+            <p>Console view</p>
+        </div>
+
+        <div>
+            <img src="../images/s13.png" alt="Screenshot 13">
+            <p>User management</p>
+        </div>
+
+        <div>
+            <img src="../images/s14.png" alt="Screenshot 14">
+            <p>Node settings</p>
+        </div>
+
+    </div>
+</section>
+                <footer>
+                    <p>Made by Bell in class | Project made to teach everyone how to host their own infrastructure.</p>
+                </footer>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
