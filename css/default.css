@@ -270,7 +270,7 @@ header p {
     }
 }
 .docti {
-    margin-top: 100vh;
+    padding-top: 1000px; /* ajusta según lo que se vea bien */
 }
 
 /*Formulario */
