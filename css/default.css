@@ -292,3 +292,62 @@ footer {
     position: absolute;
     bottom: 5px;
 }
+
+
+/*Jueguitpos*/
+
+/* Botón de juegos */
+.game-btn {
+    background: transparent;
+    border: 2px solid #0f0; /* Verde terminal como tu estilo */
+    color: #0f0;
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-family: inherit;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.game-btn:hover {
+    background: #0f0;
+    color: #1a1a1a;
+}
+
+/* Grid para las tarjetas de juegos */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tarjeta individual de juego */
+.game-card {
+    border: 1px solid #0f0;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #0f0;
+    transition: all 0.3s;
+    border-radius: 8px;
+    display: block;
+}
+
+.game-card:hover {
+    background: #0f0;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+}
+
+.game-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.game-card p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Serbell Games</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="icon" href="images/icons/favicon.png">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="video-container">
+        <!-- Vídeo de fondo -->
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="../videos/bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="main-layout">
+
+            <!-- Sidebar de navegación -->
+            <aside class="left">
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="location.reload()">🔄 Refresh</a></li>
+                        <h3>Menu</h3>
+                        <li><a href="#about">ℹ️ About</a></li>
+                        <li><a href="#games">🎮 Games</a></li>
+                        <li><a href="" onclick="passwd()">🔐 Secret</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Contenido principal -->
+            <main class="main-content">
+                
+                <!-- Header -->
+                <header>
+                    <h2>🎮 Serbell Games</h2>
+                    <p>Minimalist browser games. Click, play, enjoy.</p>
+                </header>
+
+                <hr>
+
+                <!-- Sección: About -->
+                <section class="info" id="about">
+                    <h3>ℹ️ About This Project</h3>
+                    <p>A simple launcher for minimalist HTML5 games.</p>
+                    <p>Each game lives in its own folder with an <code>index.html</code>.</p>
+                    <p>Click the button below to select your games folder and start playing.</p>
+                </section>
+
+                <!-- Sección: Games (Detector automático) -->
+                <section class="info" id="games">
+                    <h3>🎮 My Games</h3>
+                    <p>Select the folder containing your games. Each subfolder will appear as a playable game.</p>
+                    
+                    <button id="btn-cargar" class="game-btn">📂 Select Games Folder</button>
+                    
+                    <div id="lista-juegos" class="games-grid">
+                        <!-- Los juegos aparecerán aquí automáticamente -->
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer>
+                    <p>Made by Bell | Minimalist games launcher</p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>
