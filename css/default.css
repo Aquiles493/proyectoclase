@@ -505,3 +505,93 @@ header p {
     color: #00ffcc;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
+.game-btn {
+    background: transparent;
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.game-btn:hover {
+    background: #0f0;
+    color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.game-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Contenedor grid para las tarjetas de juegos */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Tarjeta individual de juego */
+.game-card {
+    border: 1px solid #0f0;
+    padding: 20px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #0f0;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    display: block;
+}
+
+.game-card:hover {
+    background: #0f0;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 255, 0, 0.4);
+    border-color: #0f0;
+}
+
+.game-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.game-card p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Mensaje cuando no hay juegos */
+.games-grid p {
+    grid-column: 1 / -1;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Responsive: ajustar en móviles */
+@media screen and (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .game-card {
+        padding: 15px 10px;
+    }
+    
+    .game-card h4 {
+        font-size: 14px;
+    }
+}
