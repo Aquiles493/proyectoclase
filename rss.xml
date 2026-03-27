@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RSS 2.0 con Atom namespace para el self-link -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <!-- Información básica del canal -->
+    <title>Serbell - Registro de Cambios</title>
+    <link>http://127.0.0.1</link>
+    <description>Últimos cambios y actualizaciones del sitio web Serbell</description>
+    <language>es-es</language>
+    <!-- Fecha en formato RFC-822 (día en inglés, formato estándar) -->
+    <lastBuildDate>Fri, 27 Mar 2026 00:00:00 GMT</lastBuildDate>
+    <!-- Self-reference para que los lectores RSS sepan dónde está el feed -->
+    <atom:link href="http://127.0.0.1/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- Item: Barra de navegación -->
+    <item>
+        <title>Barra de navegación añadida a todas las páginas</title>
+        <link>http://127.0.0.1</link>
+        <description>Añadida una barra de navegación superior a todas las páginas con enlaces a Home, Nextcloud, Pterodactyl, Games y RSS.</description>
+        <!-- Fecha en formato RFC-822 -->
+        <pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate>
+        <!-- GUID único para identificar este item -->
+        <guid>http://127.0.0.1/rss.xml#nav-bar</guid>
+    </item>
+
+    <!-- Item: Documentación de Pterodactyl -->
+    <item>
+        <title>Documentación de Pterodactyl actualizada</title>
+        <link>http://127.0.0.1/pages/ptrodactyl.html</link>
+        <description>Añadidas directrices de seguridad y requisitos de hardware para el despliegue de Pterodactyl Panel.</description>
+        <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+        <guid>http://127.0.0.1/pages/ptrodactyl.html#security-update</guid>
+    </item>
+
+    <!-- Item: Tutorial de Nextcloud -->
+    <item>
+        <title>Tutorial de seguridad de Nextcloud añadido</title>
+        <link>http://127.0.0.1/pages/ncselfmade.html</link>
+        <description>Añadida sección de seguridad con tutorial en vídeo para endurecer instalaciones de Nextcloud.</description>
+        <pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate>
+        <guid>http://127.0.0.1/pages/ncselfmade.html#security-tutorial</guid>
+    </item>
+
+    <!-- Item: Página de Games -->
+    <item>
+        <title>Página de Games lanzada</title>
+        <link>http://127.0.0.1/pages/games.html</link>
+        <description>Lanzador de juegos minimalista para navegador añadido. Selecciona tu carpeta de juegos y empieza a jugar.</description>
+        <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+        <guid>http://127.0.0.1/pages/games.html#launch</guid>
+    </item>
+
+    <!-- Item: Sección de contacto -->
+    <item>
+        <title>Sección de contacto añadida</title>
+        <link>http://127.0.0.1/index.html#contact</link>
+        <description>Añadido formulario de contacto con casilla de privacidad y mapa integrado a la página principal.</description>
+        <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
+        <guid>http://127.0.0.1/index.html#contact-form</guid>
+    </item>
+
+    <!-- Item: Sección de servicios -->
+    <item>
+        <title>Sección de servicios actualizada</title>
+        <link>http://127.0.0.1/index.html#services</link>
+        <description>Añadidos enlaces a las páginas de documentación de Nextcloud, Pterodactyl y Games.</description>
+        <pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate>
+        <guid>http://127.0.0.1/index.html#services-update</guid>
+    </item>
+
+    <!-- Item: Lanzamiento inicial -->
+    <item>
+        <title>Lanzamiento inicial del sitio web</title>
+        <link>http://127.0.0.1</link>
+        <description>Sitio web Serbell lanzado con documentación y recursos sobre servidores web enfocados en privacidad.</description>
+        <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
+        <guid>http://127.0.0.1#launch</guid>
+    </item>
+
+</channel>
+</rss>
